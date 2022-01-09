@@ -2,14 +2,17 @@ import {Component} from "react";
 
 export default class Like extends Component {
     render() {
+        let isDisabled = false
+        if (this.props.dislike === true){
+            isDisabled = true
+        }
         return (
             <>
-                <i className="fa fa-thumbs-up  m-2"
+                <button className="fa fa-thumbs-up  m-2" disabled={isDisabled}
                    style={{
-                       'cursor':'pointer',
-                       'fontSize':'30px',
+                       'fontSize': '30px',
                        'color': this.props.like === true ? '#0d6efd' : 'black'
-                        }}
+                   }}
                    onClick={this.props.handleLike}
                 />
             </>
