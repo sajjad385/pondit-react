@@ -1,6 +1,7 @@
 import {Component} from "react";
 import Post from "./post.component";
 import posts from "../postData.json"
+import CreatePost from "./create-post.component";
 
 export default class Posts extends Component {
     state = {
@@ -58,8 +59,7 @@ export default class Posts extends Component {
         return (
             <>
                 <div className="container p-2">
-                    <input type="text" placeholder='Create new post' onChange={this.handleCreatePost}/>
-                    <button onClick={this.handleCreatePost}>Add New Post</button>
+                    <CreatePost/>
                     <div className="row">
                         {
                             this.state.posts.map((value) => {

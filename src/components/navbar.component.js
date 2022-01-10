@@ -4,10 +4,10 @@ export default class Navbar extends Component {
     render() {
         return (
             <>
-                <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+                <nav className="navbar navbar-expand-lg shadow navbar-light sticky-top" style={{'background':'#f4f1f1'}}>
                     <div className="container">
-                        <a className="navbar-brand font-weight-bold text-white" href="#">
-                            Facebook
+                        <a className="navbar-brand font-weight-bold" href="#">
+                            <b>BLOGP</b>
                         </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -18,10 +18,10 @@ export default class Navbar extends Component {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <a className="nav-link active text-primary" aria-current="page"
-                                       href="#">Like {this.props.totalLike}</a>
+                                       href="#"><b>Like</b> {this.props.totalLike}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link text-success" href="#">Dislike {this.props.totalDisLike}</a>
+                                    <a className="nav-link text-success" href="#"><b>Dislike</b> {this.props.totalDisLike}</a>
                                 </li>
                             </ul>
                         </div>

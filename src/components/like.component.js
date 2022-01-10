@@ -8,7 +8,7 @@ export default class Like extends Component {
         }
         return (
             <>
-                <button className="fa fa-thumbs-up  m-2" disabled={isDisabled}
+                <button className="fa fa-thumbs-up btn" disabled={isDisabled}
                    style={{
                        'fontSize': '30px',
                        'color': this.props.like === true ? '#0d6efd' : 'black'
