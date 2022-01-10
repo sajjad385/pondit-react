@@ -5,7 +5,7 @@ const CreatePost = props => {
                 <input className='form-control' type="text" placeholder='Create new post'/>
             </div>
             <div className='col-6'>
-                <button className='btn bg-secondary text-white' onClick={props.handleCreatePost}><i className='fa fa-plus'
+                <button className='btn bg-primary text-white' onClick={props.handleCreatePost}><i className='fa fa-plus'
                 /> New Post
                 </button>
             </div>

@@ -4,7 +4,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <>
-                <nav className="navbar navbar-expand-lg shadow navbar-light sticky-top" style={{'background':'#f4f1f1'}}>
+                <nav className="navbar navbar-expand-lg border-bottom navbar-light sticky-top" style={{'background':'#ffff'}}>
                     <div className="container">
                         <a className="navbar-brand font-weight-bold" href="#">
                             <b>BLOGP</b>
