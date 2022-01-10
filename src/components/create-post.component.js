@@ -1,11 +1,13 @@
-const CreatePost = () => {
+const CreatePost = props => {
     return (
         <div className='row mt-4'>
             <div className='col-6'>
                 <input className='form-control' type="text" placeholder='Create new post'/>
             </div>
             <div className='col-6'>
-                <button className='btn bg-secondary text-white'> <i className='fa fa-plus'/> New Post</button>
+                <button className='btn bg-secondary text-white' onClick={props.handleCreatePost}><i className='fa fa-plus'
+                /> New Post
+                </button>
             </div>
         </div>
     )

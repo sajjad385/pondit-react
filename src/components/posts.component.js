@@ -45,8 +45,8 @@ export default class Posts extends Component {
         })
     }
 
-    handleCreatePost = e => {
-        console.log(e.target.value)
+    handleCreatePost = () => {
+        console.log('create new post')
     }
 
     handlePostRemove = id => {
@@ -59,7 +59,7 @@ export default class Posts extends Component {
         return (
             <>
                 <div className="container p-2">
-                    <CreatePost/>
+                    <CreatePost handleCreatePost={()=>this.handleCreatePost()}/>
                     <div className="row">
                         {
                             this.state.posts.map((value) => {
