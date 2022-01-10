@@ -12,8 +12,8 @@ class App extends Component {
         this.setState({ like })
     }
 
-    totalDisLike = dislike => {
-        this.setState({ dislike })
+    totalDisLike = value => {
+        this.setState({ disLike:value })
     }
 
     render() {

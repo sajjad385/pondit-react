@@ -1,6 +1,6 @@
 import {Component} from "react";
 import Post from "./post.component";
-import posts from '../postData.json'
+import posts from "../postData.json"
 
 export default class Posts extends Component {
     state = {
