@@ -2,10 +2,12 @@ import {Component} from "react";
 import Post from "./post.component";
 import posts from "../postData.json"
 import CreatePost from "./create-post.component";
+import PostForm from "./form.component";
 
 export default class Posts extends Component {
     state = {
-        posts: posts
+        posts: posts,
+        form: false
     }
     handleLike = id => {
         const {handleTotalDisLike, handleTotalLike, totalDisLike, totalLike} = this.props
@@ -46,7 +48,21 @@ export default class Posts extends Component {
     }
 
     handleCreatePost = () => {
-        console.log('create new post')
+        if (this.state.form === false) {
+            this.setState({form: true})
+        } else {
+            this.setState({form: false})
+        }
+    }
+    handleCreate = (item) => {
+        const posts = [...this.state.posts]
+        item.id = posts.length + 1
+        item.image ='https://img.freepik.com/free-vector/blogging-illustration-concept_114360-851.jpg?size=338&ext=jpg'
+        item.like =false
+        item.dislike =false
+        posts.push(item)
+        this.setState({posts})
+        this.setState({form: false})
     }
 
     handlePostRemove = id => {
@@ -59,7 +75,9 @@ export default class Posts extends Component {
         return (
             <>
                 <div className="container p-2">
-                    <CreatePost handleCreatePost={()=>this.handleCreatePost()}/>
+                    <CreatePost handleCreatePost={() => this.handleCreatePost()}/>
+                    {this.state.form === true ? <PostForm handleCreate={this.handleCreate}/> : ''}
+                    {/*<PostForm/>*/}
                     <div className="row">
                         {
                             this.state.posts.map((value) => {
